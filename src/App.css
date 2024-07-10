@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   color: white;
+  font-family: 'Jost', sans-serif;
 }
 .App {
   background-image: linear-gradient(to top left, rgb(54, 11, 80) , rgb(181, 123, 219));
