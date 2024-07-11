@@ -75,6 +75,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
+
 }
 
 .Modal .container{
@@ -82,9 +83,7 @@
   top: 25%;
   left: 50%;
   transform: translate(-50%, -25%);
-  background-color: #121215;
-  padding: 50px;
-  border-radius: 25px;
+  
 }
 
 .Modal .container button{
@@ -94,6 +93,8 @@
   padding: 5px;
   cursor: pointer;
 }
+
+
 /* AddNewTodo  */
 .AddNewTodo .btn button{
   position: absolute;
@@ -112,3 +113,5 @@
   filter: brightness(1.1);
   transition: all 300ms ease;
 }
+
+
