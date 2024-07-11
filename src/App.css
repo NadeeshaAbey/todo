@@ -1,7 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  color: white;
+  color: #8A8BA5;
+  box-sizing: border-box;
   font-family: 'Jost', sans-serif;
 }
 .App {
@@ -86,13 +87,7 @@
   
 }
 
-.Modal .container button{
-  background-color: #121215;
-  font-weight: bold;
-  color: blueviolet;
-  padding: 5px;
-  cursor: pointer;
-}
+
 
 
 /* AddNewTodo  */
@@ -100,6 +95,7 @@
   position: absolute;
   right: 140px;
   bottom: 80px;
+  color: white;
   background-color: #8867f5;
   width: 150px;
   height: 50px;
@@ -114,4 +110,109 @@
   transition: all 300ms ease;
 }
 
+/* AddNewTodo form  */
+.AddNewTodo form{
+  padding: 50px;
+  width: 500px;
+  background-color: #121215;
+  border-radius: 25px;
+}
 
+.AddNewTodo form .text h3{
+  padding-bottom: 1rem;
+  color: #ACAFF3;
+}
+
+
+.AddNewTodo form .text input{
+  padding: 1rem;
+  width: 100% ;
+  margin-bottom: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #2F2D36;
+  border-radius: 25px;
+}
+
+.AddNewTodo form .text input:focus{
+  outline: none;
+  border: 1px solid #8867f5;
+}
+
+.AddNewTodo form .remind{
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.AddNewTodo form p{
+  margin-left: 10px;
+}
+
+.AddNewTodo form .title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.AddNewTodo form .pick-day{
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.AddNewTodo form .pick-time{
+  padding: 1.5rem;
+}
+
+.AddNewTodo form .pick-project{
+  padding: 0.5rem;
+}
+
+.AddNewTodo form .pick-project .projects{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.AddNewTodo form .pick-project .projects .project{
+  border: 1px solid #2F2D36;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.AddNewTodo form .pick-project .projects .active{
+  background-color: #8867f5;
+  color: white;
+}
+
+.AddNewTodo form .cancel{
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+
+.AddNewTodo form .confirm{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.AddNewTodo form .confirm button{
+  width: 100%;
+  height: 60px;
+  color: white;
+  background-color: #8867f5;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.AddNewTodo form .confirm button:hover{
+  filter: brightness(1.1);
+  transition: all 300ms ease;
+}
