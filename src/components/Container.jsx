@@ -1,21 +1,13 @@
-import React from 'react'
-import User from './User'
-import Sidebar from './Sidebar'
-import Main from './Main'
-import AddNewTodo from './AddNewTodo'
-import Calendar from './Calendar'
-import Projects from './Projects'
-import Todos from './Todos'
-import EditTodo from './EditTodo'
+import React from "react";
 
-function Container() {
-  return (
-    <div className='Container'>
-        <User />
-        <Sidebar />
-        <Main /> 
+function Container({ children }) {
+  
+  return(
+    <div className="Container">
+      {children}
     </div>
-  )
+  ) 
+    
 }
 
-export default Container
+export default Container;

@@ -68,7 +68,7 @@ function AddNewTodo() {
               </div>
             </div>
             <div className="cancel" onClick={() => setShowModal(false)}>
-              <X size="40"/>
+              <X size="60" className="bi bi-x "/>
             </div>
             <div className="confirm">
               <button>Add to do</button>
