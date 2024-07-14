@@ -40,6 +40,9 @@
 
 .Main {
   flex: 3;
+  display: flex;
+  padding: 50px;
+  gap: 40px;
 }
 
 /* User  */
@@ -354,6 +357,7 @@
   position: absolute;
   right: 0;
   display: flex;
+  gap: 10px;
 }
 
 .Project .btns .edit-delete span {
@@ -437,4 +441,33 @@
 .ProjectForm button:hover{
   filter: brightness(1.1);
   transition: all 300ms ease;
+}
+
+/* Todos  */
+.Todos{
+  flex: 50%;
+  background-color: #71717517;
+  border-radius: 25px 0 0 25px;
+  padding: 10px;
+}
+
+.Todos .selected-project{
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  color: #acaff3;
+  border-bottom: 1px solid #4c4955fa;
+}
+
+.Todos .todos{
+  overflow-y: auto;
+}
+
+.EditTodo{
+  flex: 50%;
+  background-color: #71717517;
+  border-radius: 0 25px 25px 0;
+  padding: 10px;
 }

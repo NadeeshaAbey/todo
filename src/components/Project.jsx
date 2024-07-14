@@ -19,10 +19,10 @@ function Project({project, edit}) {
                 className='edit'
                 onClick={() => setShowModal(true)}
               >
-                <Pencil size='13'/>
+                <Pencil size='18' />
               </span>
               <span className='delete'>
-                <XCircle size='13' />
+                <XCircle size='18' />
               </span>
             </div>
             :

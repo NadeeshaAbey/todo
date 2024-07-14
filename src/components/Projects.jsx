@@ -37,7 +37,7 @@ function Projects() {
             {
               showMenu && 
               <span className='edit' onClick={() => setEdit(edit => !edit)}>
-              <PencilFill size='15' color={pencilColor} />
+              <PencilFill size='18' color={pencilColor} />
             </span>
             }
             <AddNewProject />
