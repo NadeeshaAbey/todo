@@ -6,7 +6,6 @@ import {
   TimePicker,
 } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import dayjs from "dayjs";
 
 function TodoForm({
   handleSubmit,
@@ -17,6 +16,7 @@ function TodoForm({
   setDay,
   time,
   setTime,
+  todoProject, setTodoProject,
   projects,
   showButtons = false,
   setShowModal = false,
@@ -58,11 +58,23 @@ function TodoForm({
             <p>Choose a project</p>
           </div>
           <div className="projects">
-            {projects.map((project) => (
-              <div key={project.id} className="project">
-                {project.name}
+            {
+              projects.length > 0 ?
+              projects.map((project) => (
+                <div 
+                  key={project.id}
+                  onClick={() => setTodoProject(project.name)} 
+                  className={`project ${todoProject === project.name ? "active" : ""}`}
+                  >
+                  {project.name}
+                </div>
+                )
+              )
+              :
+              <div style={{color:'red'}}>
+                Please add a project before proceeding
               </div>
-            ))}
+            }
           </div>
         </div>
         {showButtons && (

@@ -33,11 +33,11 @@ function Project({project, edit}) {
               </span>
             </div>
             :
-            project.numberOfTodos === 0 ?
+            project.numOfTodos === 0 ?
             ""
             :
             <div className="total-todos">
-              {project.numberOfTodos}
+              {project.numOfTodos}
             </div>
           }
         </div>

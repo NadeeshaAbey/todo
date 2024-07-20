@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import dayjs from 'dayjs'
 import TodoForm from './TodoForm'
 
 function EditTodo() {
@@ -7,6 +6,7 @@ function EditTodo() {
   const [text, setText] = useState();
   const [day, setDay] = useState();
   const [time, setTime] = useState();
+  const [todoProject, setTodoProject] = useState();
 
   const projects = [
     {
@@ -43,6 +43,8 @@ function EditTodo() {
             setDay={setDay}
             time={time}
             setTime={setTime}
+            todoProject={todoProject}
+            setTodoProject={setTodoProject}
             projects={projects}
           />
       </div>

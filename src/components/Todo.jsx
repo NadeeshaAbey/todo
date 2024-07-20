@@ -25,7 +25,7 @@ function Todo({todo}) {
         </div>
         <div className="text">
           <p style={{color: todo.checked ? 'rgba(244, 245, 252, 0.4)' : '#F4F5FC'}}>{todo.text}</p>
-          <span>{todo.time} - {todo.project}</span>
+          <span>{todo.time} - {todo.projectName}</span>
           <div className={`line ${todo.checked ? 'line-through' : ''}`}></div>
         </div>
         <div className="add-to-next-day">

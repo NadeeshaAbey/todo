@@ -1,37 +1,48 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "./Modal";
 import dayjs from "dayjs";
-import Todo from "./Todo";
 import TodoForm from "./TodoForm";
+import { TodoContext } from "../context";
 
 function AddNewTodo() {
+  //CONTEXT
+  const {selectedProject} = useContext(TodoContext);
+
+  //STATE
   const [showModal, setShowModal] = useState(false);
 
   const [text, setText] = useState("");
   const [day, setDay] = useState(dayjs(new Date()));
   const [time, setTime] = useState(dayjs(new Date()));
+  const [todoProject, setTodoProject] = useState(selectedProject);
+
+
 
   const projects = [
     {
       id: 1,
       name: 'personal',
-      numberOfTodos: 0
+      numOfTodos: 0
     },
     {
       id: 2,
       name: 'work',
-      numberOfTodos: 1
+      numOfTodos: 1
     },
     {
       id: 3,
       name: 'other',
-      numberOfTodos: 2
+      numOfTodos: 2
     }
   ]
 
   function handleSubmit() {
 
   }
+
+  useEffect(() =>{
+    setTodoProject(selectedProject)
+  }, [selectedProject] )
   return (
     <div className="AddNewTodo">
       <div className="btn">
@@ -48,6 +59,8 @@ function AddNewTodo() {
           setDay={setDay}
           time={time}
           setTime={setTime}
+          todoProject={todoProject}
+          setTodoProject={setTodoProject}
           projects={projects}
           showButtons={true}
           setShowModal={setShowModal}
