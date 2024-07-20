@@ -16,8 +16,8 @@ function AddNewTodo() {
   const [showModal, setShowModal] = useState(false);
 
   const [text, setText] = useState("");
-  const [day, setDay] = useState(dayjs(Date()));
-  const [time, setTime] = useState(dayjs(Date()));
+  const [day, setDay] = useState(new Date());
+  const [time, setTime] = useState(new Date());
   const [todoProject, setTodoProject] = useState(selectedProject);
 
 
@@ -41,8 +41,8 @@ function AddNewTodo() {
         )
       setShowModal(false)
       setText('')
-      setDay(dayjs(Date()))
-      setTime(dayjs(Date()))
+      setDay(new Date())
+      setTime(new Date())
     }
   }
 

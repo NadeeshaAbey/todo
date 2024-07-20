@@ -5,7 +5,8 @@ import {
   LocalizationProvider,
   TimePicker,
 } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
 
 function TodoForm({
   handleSubmit,
@@ -22,7 +23,7 @@ function TodoForm({
   setShowModal = false,
 }) {
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
       <form onSubmit={handleSubmit} className="TodoForm">
         <div className="text">
           {heading && <h3>{heading}</h3>}
