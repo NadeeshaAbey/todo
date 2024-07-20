@@ -12,17 +12,17 @@ function EditTodo() {
     {
       id: 1,
       name: 'personal',
-      numberOfTodos: 0
+      numOfTodos: 0
     },
     {
       id: 2,
       name: 'work',
-      numberOfTodos: 1
+      numOfTodos: 1
     },
     {
       id: 3,
       name: 'other',
-      numberOfTodos: 2
+      numOfTodos: 2
     }
   ]
 
