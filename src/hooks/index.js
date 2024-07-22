@@ -71,7 +71,7 @@ export function useProjects(){
 
                     return {
                         id: doc.id, 
-                        name : doc.data().name,
+                        name : doc.data().name
                         
                     }
                 });
