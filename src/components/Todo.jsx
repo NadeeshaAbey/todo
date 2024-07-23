@@ -1,12 +1,23 @@
-import React, { useState } from 'react'
-import { ArrowClockwise, Circle, CircleFill, Trash } from 'react-bootstrap-icons'
+import React, { useContext, useState } from 'react'
+import { ArrowClockwise, CheckCircleFill, Circle, Trash } from 'react-bootstrap-icons'
 import firebase from '../firebase'
 import moment from 'moment'
+import { TodoContext } from '../context'
 
 function Todo({todo}) {
-
+  //STATE
   const [hover, setHover] = useState(false)
 
+  //CONTEXT
+  const { selectedTodo, setSelectedTodo } = useContext(TodoContext)
+
+  const handleDelete = (todo) => {
+    deleteTodo(todo)
+
+    if(selectedTodo === todo){
+      setSelectedTodo(undefined)
+    }
+  }
   const deleteTodo = (todo) => {
     firebase
       .firestore()
@@ -59,7 +70,7 @@ function Todo({todo}) {
           {
             todo.checked ?
             <span className='checked'>
-              <CircleFill />
+              <CheckCircleFill />
             </span>
             :
             <span className='unchecked'>
@@ -67,7 +78,10 @@ function Todo({todo}) {
             </span>
           }
         </div>
-        <div className="text">
+        <div 
+          className="text"
+          onClick={ () => setSelectedTodo(todo)}
+        >
           <p style={{color: todo.checked ? 'rgba(244, 245, 252, 0.4)' : '#F4F5FC'}}>{todo.text}</p>
           <span>{todo.time} - {todo.projectName}</span>
           <div className={`line ${todo.checked ? 'line-through' : ''}`}></div>
@@ -85,7 +99,7 @@ function Todo({todo}) {
         </div>
         <div 
           className="delete-todo"
-          onClick={ () => deleteTodo(todo)}
+          onClick={ () => handleDelete(todo)}
         >
           {
             (hover || todo.checked) &&
